@@ -7,7 +7,6 @@ export default async function handler(req, res) {
         }
     }).then((response) => {
         let courses = [];
-        console.log(response.data)
         for (let i in response.data) {
             if (response.data[i].course_code) {
                 courses.push(response.data[i].course_code);

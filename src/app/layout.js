@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import "./globals.css";
+import { Metadata } from 'next';  // For handling metadata in server-side layout
+import ClientNavigation from './clientNavigation';  // Import the client-side navigation component
 
 export const metadata = {
   title: 'Easely',
@@ -11,10 +11,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Link href="/">HOME</Link> 
-        <Link href="/todo">TODO</Link>
+        {/* Render the client-side navigation component */}
+        <ClientNavigation />
+        
         {children}
       </body>
     </html>
-  )
+  );
 }
